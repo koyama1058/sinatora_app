@@ -1,11 +1,13 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'pry'
 
 get '/' do
   erb :index
 end
 
 get '/memo' do
+  binding.pry
   erb :index
 end
 
