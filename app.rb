@@ -2,10 +2,21 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  'メモ一覧表示'
+  erb :index
 end
 
 get '/memo' do
-  'メモの投稿画面'
+  erb :index
 end
 
+get '/memo/new' do
+  erb :new
+end
+
+get '/memo/edit' do
+  erb :edit
+end
+
+get '/memo/show' do
+  erb :show
+end
