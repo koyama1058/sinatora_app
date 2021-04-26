@@ -1,5 +1,11 @@
 require 'sinatra'
+require 'sinatra/reloader'
 
 get '/' do
-  'hello'
+  'メモ一覧表示'
 end
+
+get '/memo' do
+  'メモの投稿画面'
+end
+
