@@ -1,7 +1,7 @@
 <h2>トップページ</h1>
 <ul class="memos">
     <% @memos.each do |memo|  %>
-      <li><a href="/memo/show/<%= memo["id"] %>"><%= memo["title"] %></a></li>
+      <li><a href="/memo/show/<%= memo["id"] %>"><%= h(memo["title"]) %></a></li>
     <% end %>
   </ul>
 

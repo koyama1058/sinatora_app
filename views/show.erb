@@ -1,5 +1,5 @@
-<h3><%= @memo["title"] %></h3>
-<p><%= @memo["text"] %></p>
+<h3><%= h(@memo["title"]) %></h3>
+<p><%= h(@memo["text"]) %></p>
 
 <form method="get" action="/memo/edit/<%= @memo["id"] %>">
     <input type="submit" value="編集">

@@ -4,6 +4,12 @@ require 'pry'
 require 'json'
 require 'securerandom'
 
+helpers do
+  def h(text)
+    Rack::Utils.escape_html(text)
+  end
+end
+
 get '/memos' do
   files = Dir.glob('memos/*').sort_by { |file| File.mtime(file) }
   @memos = files.map { |file| JSON.parse(File.read(file)) }
