@@ -1,1 +1,8 @@
-編集画面
+<form method="post" action="/memo/edit/<%= @memo["id"] %>">
+  <p><input required type="text" name="title" value="<%= @memo["title"] %>" size="40"></p>
+  <p><input type="textarea" name="text" value="<%= @memo["text"] %>" size="80"></p>
+  <input type="hidden" name="_method" value="PATCH">
+  <p><input type="submit" value="変更"></p>
+</form>
+
+<p><a href="/memos"> ホームへ戻る</a></p>
