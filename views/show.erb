@@ -1,7 +1,9 @@
 <h3><%= @memo["title"] %></h3>
 <p><%= @memo["text"] %></p>
-<p><a href="/memo/edit/<%= @memo["id"] %>"> 編集</a></p>
 
+<form method="get" action="/memo/edit/<%= @memo["id"] %>">
+    <input type="submit" value="編集">
+</form>
 
 <form method="post" action="/memo/<%= @memo["id"] %>">
     <input type="hidden" name="_method" value="DELETE"> 
