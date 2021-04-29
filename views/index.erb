@@ -1,0 +1,8 @@
+<h2>トップページ</h1>
+<ul class="memos">
+    <% @memos.each do |memo|  %>
+      <li><a href="/memos/<%= memo["id"] %>"><%= h(memo["title"]) %></a></li>
+    <% end %>
+  </ul>
+
+<p><a href="/memos/new" >メモの作成</a></p>
